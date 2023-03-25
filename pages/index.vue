@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Blog from "~~/components/blog.vue";
 
+const indexName = "test_index";
 const posts = ref([]);
 const loading = ref(true);
 type typeOfPosts = {
@@ -55,9 +56,10 @@ onMounted(async () => {
 
     <div class="max-w-3xl mx-auto mt-8">
       <Loader :loading="loading" />
+
       <h1 class="text-4xl font-semibold mb-8 text-center">Blog</h1>
 
-      <div v-for="post in cleanedPosts">
+      <div v-for="post in cleanedPosts" class="mx-auto px-3">
         <Blog :post="post" />
       </div>
     </div>
