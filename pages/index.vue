@@ -52,8 +52,6 @@ onMounted(async () => {
 </script>
 <template>
   <div>
-    <!-- results  with tailwindcss-->
-
     <div class="max-w-3xl mx-auto mt-8">
       <Loader :loading="loading" />
 
